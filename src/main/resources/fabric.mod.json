@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "hydradragon",
+  "version": "${version}",
+  "name": "Hydra Dragon",
+  "description": "A three-headed boss dragon that spits fireballs.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.hydradragon.HydraDragonMod"],
+    "client": ["com.hydradragon.HydraDragonClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
