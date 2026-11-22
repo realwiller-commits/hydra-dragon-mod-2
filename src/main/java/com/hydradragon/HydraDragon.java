@@ -1,6 +1,7 @@
 package com.hydradragon;
 
 import java.util.EnumSet;
+import java.util.UUID;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerBossEvent;
@@ -22,8 +23,9 @@ import net.minecraft.world.phys.Vec3;
  * firing fireballs from left / middle / right, plus a boss bar.
  */
 public class HydraDragon extends Ghast {
-    private final ServerBossEvent bossEvent = new ServerBossEvent(
-            Component.translatable("entity.hydradragon.hydra_dragon"),
+private final ServerBossEvent bossEvent = new ServerBossEvent(
+        UUID.randomUUID(),
+        Component.translatable("entity.hydradragon.hydra_dragon"),
             BossEvent.BossBarColor.PURPLE,
             BossEvent.BossBarOverlay.PROGRESS);
 
