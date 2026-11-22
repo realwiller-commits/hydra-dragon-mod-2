@@ -271,7 +271,7 @@ public class HydraDragon extends Mob {
     private void broadcast(ServerLevel level, String message) {
         for (ServerPlayer p : level.players()) {
             if (p.distanceToSqr(this) < 150.0 * 150.0) {
-                p.displayClientMessage(Component.literal(message), true);
+                p.sendSystemMessage(Component.literal(message));
             }
         }
     }
