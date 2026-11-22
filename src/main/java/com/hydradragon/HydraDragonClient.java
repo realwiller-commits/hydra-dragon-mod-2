@@ -1,13 +1,15 @@
 package com.hydradragon;
 
+import com.hydradragon.client.HydraDragonModelLayers;
+import com.hydradragon.client.HydraDragonRenderer;
+
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.minecraft.client.renderer.entity.GhastRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 
 public class HydraDragonClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        // Stage 1: reuse the Ghast look (scaled up). Stage 2 replaces this with a real three-headed model.
-        EntityRendererRegistry.register(HydraDragonMod.HYDRA_DRAGON, GhastRenderer::new);
+        HydraDragonModelLayers.register();
+        EntityRenderers.register(HydraDragonMod.HYDRA_DRAGON, HydraDragonRenderer::new);
     }
 }

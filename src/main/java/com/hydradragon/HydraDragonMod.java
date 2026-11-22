@@ -20,9 +20,10 @@ public class HydraDragonMod implements ModInitializer {
             BuiltInRegistries.ENTITY_TYPE,
             HYDRA_DRAGON_KEY,
             EntityType.Builder.of(HydraDragon::new, MobCategory.MONSTER)
-                    .sized(4.0f, 4.0f)
+                    .sized(2.5f, 1.5f)
                     .fireImmune()
-                    .clientTrackingRange(10)
+                    .clientTrackingRange(16)
+                    .updateInterval(1)
                     .build(HYDRA_DRAGON_KEY));
 
     @Override
